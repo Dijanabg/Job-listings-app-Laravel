@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Listing;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Storage;
@@ -90,7 +91,7 @@ class ListingController extends Controller
 
     // Manage Listings
     //NOT DONE.............
-    // public function manage() {
-    //     return view('listings.manage', ['listings' => auth()->user()->listings()->get()]);
-    // }
+    public function manage() {
+        return view('listings.manage', ['listings' => auth()->user()->listings()->get()]);
+    }
 }
